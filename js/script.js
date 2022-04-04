@@ -72,3 +72,17 @@ previewContainer.querySelector('#close-preview').onclick = () => {
     close.classList.remove('active')
   })
 }
+
+
+let swiper3 = new Swiper(".menu-slider", {
+  grabCursor: true,
+  autoHeight: true,
+  loop: true,
+  centeredSlides: true,
+  spaceBetween: 20,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+
+});

@@ -423,6 +423,135 @@ section {
   display: flex;
 }
 
+.menu {
+  background: var(--light-bg);
+}
+
+.menu .slide {}
+
+.menu .slide .title {
+  padding: 1rem;
+  font-size: 3rem;
+  background: var(--peru);
+  margin-bottom: 3rem;
+  text-align: center;
+  color: var(--white);
+}
+
+.menu .slide .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding-bottom: 4rem;
+}
+
+.menu .slide .box {
+  flex: 1 1 51rem;
+  background-color: var(--white);
+  padding: 2rem;
+  box-shadow: var(--box-shadow);
+  border: var(--border);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.menu .slide .box h3 {
+  font-size: 2.5rem;
+  color: var(--black);
+  padding-bottom: .5rem;
+}
+
+.menu .slide .box p {
+  font-size: 1.6rem;
+  color: var(--light-black);
+  line-height: 2;
+}
+
+.menu .slide .box .price {
+  font-size: 2.5rem;
+  color: var(--peru);
+}
+
+.menu .slide .box:hover {
+  transform: scale(.9);
+  cursor: pointer;
+}
+
+
+.order {
+  background-color: var(--peru);
+}
+
+.order .heading span {
+  color: var(--white);
+}
+
+.order .heading h3 {
+  color: var(--white);
+}
+
+.order form {
+  padding: 2rem;
+  background-color: var(--white);
+  box-shadow: var(--box-shadow);
+}
+
+.order form .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.order form .box-container .box {
+  flex: 1 1 51rem;
+}
+
+.order form .box-container .box input,
+.order form .box-container .box textarea {
+  width: 100%;
+  padding: 1.2rem 1.4rem;
+  margin: 1rem 0;
+  font-size: 1.7rem;
+  border: var(--border);
+  text-transform: none;
+  color: var(--light-black);
+}
+
+.order form .box-container .box input::placeholder,
+.order form .box-container .box textarea::placeholder {
+  text-transform: capitalize;
+}
+
+.order form .box-container .box input:focus,
+.order form .box-container .box textarea:focus {
+  background: var(--black);
+  color: var(--white);
+}
+
+.order form .box-container .box input:focus::placeholder,
+.order form .box-container .box textarea:focus::placeholder {
+  color: var(--light-white);
+}
+
+.order form .box-container .box textarea {
+  height: 20rem;
+  resize: none;
+}
+
+.order form .box-container .box .map {
+  height: 20rem;
+  width: 100%;
+  margin: 1rem 0;
+  padding: .5rem 0;
+}
+
+.order form .box-container .box span {
+  color: var(--light-black);
+  font-size: 2rem;
+}
+
 
 
 
@@ -536,12 +665,18 @@ section {
     bottom: 1rem;
   }
 
-  @media (max-width:450px) {
-    html {
-      font-size: 50%;
-    }
-
-    .home .slide .content h3 {
-      font-size: 6rem;
-    }
+  .menu .slide .box {
+    text-align: center;
+    flex-flow: column;
   }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  .home .slide .content h3 {
+    font-size: 6rem;
+  }
+}
